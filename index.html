@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Twitter Clone</a>
+    </nav>
+
+    <div id="authSection">
+        <!-- Login Form -->
+        <div id="loginForm" class="auth-form">
+            <h3>Login</h3>
+            <input type="text" id="loginUsername" placeholder="Username" class="form-control mb-2">
+            <input type="password" id="loginPassword" placeholder="Password" class="form-control mb-2">
+            <button id="loginButton" class="btn btn-primary">Login</button>
+            <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" class="auth-form d-none">
+            <h3>Sign Up</h3>
+            <input type="text" id="signupUsername" placeholder="Username" class="form-control mb-2">
+            <input type="password" id="signupPassword" placeholder="Password" class="form-control mb-2">
+            <button id="signupButton" class="btn btn-primary">Sign Up</button>
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+
+    <div id="mainApp" class="container mt-4 d-none">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar -->
+                <ul class="list-group">
+                    <li class="list-group-item">Home</li>
+                    <li class="list-group-item">Explore</li>
+                    <li class="list-group-item">Notifications <span id="notificationCount" class="badge badge-danger">0</span></li>
+                    <li class="list-group-item">Messages</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <!-- Tweet Box -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <textarea id="tweetInput" class="form-control" rows="3" placeholder="What's happening?"></textarea>
+                        <button id="tweetButton" class="btn btn-primary mt-2">Tweet</button>
+                    </div>
+                </div>
+
+                <!-- Feed -->
+                <div id="tweetFeed">
+                    <!-- Tweets will be injected here -->
+                </div>
+            </div>
+            <div class="col-md-3">
+                <!-- Right Sidebar -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Trending</h5>
+                        <p class="card-text">#Coding</p>
+                        <p class="card-text">#Bootstrap</p>
+                        <p class="card-text">#JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
